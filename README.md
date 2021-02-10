@@ -11,10 +11,9 @@ usage: sra_ftp_urls.py [-h] [--id SRA_ID] [--file-ids FILE_IDS] --output-dir OUT
 Download fastQ files from SRA with a (list of) SRA id(s)
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --id SRA_ID           id of a SRA (e.g. SRR1778454)
-  --file-ids FILE_IDS   path to file containing one or more SRA's
-  --output-dir OUTPUT_DIR
-                        path to output dir
+  -h, --help                show this help message and exit
+  --id SRA_ID               id of a SRA (e.g. SRR1778454)
+  --file-ids FILE_IDS       path to file containing one or more SRA's
+  --output-dir OUTPUT_DIR   path to output dir
 ```
 
