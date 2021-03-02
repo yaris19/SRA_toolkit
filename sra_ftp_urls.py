@@ -5,12 +5,14 @@ from os import chmod
 import requests
 
 parser = argparse.ArgumentParser(
-    description="Download fastQ files from SRA with a (list of) SRA id(s)")
-parser.add_argument("--id", default="", dest="sra_id", type=str,
-                    help="id of a SRA (e.g. SRR1778454)")
-parser.add_argument("--file-ids", dest="file_ids", type=argparse.FileType("r"),
-                    help="path to file containing one or more SRA's")
-parser.add_argument("--output-dir", dest="output_dir", required=True, type=str,
+    description="Download fastQ files from SRA accessions")
+parser.add_argument("-i", "--id", default="", dest="sra_id", type=str,
+                    help="accession id of a SRA (e.g. SRR1778454)")
+parser.add_argument("-f", "--file-ids", dest="file_ids",
+                    type=argparse.FileType("r"),
+                    help="path to file containing one or more SRA acessions ids")
+parser.add_argument("-o", "--output-dir", dest="output_dir", required=True,
+                    type=str,
                     help="path to output dir")
 
 
