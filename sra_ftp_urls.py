@@ -48,13 +48,18 @@ def get_ftp_file_path(input_sra):
 
 
 def write_commands_to_file(ftp_paths, output_dir):
-    out_file = f"{output_dir}/wget_commands_sra_paths.shs"
+    out_file = f"{output_dir}/wget_commands_sra_paths.sh"
+
+    if " " in output_dir:
+        output_dir = f"'{output_dir}'"
+
     with open(out_file, "w") as f:
         f.write("!/usr/bin/bash\n")
         for ftp_path in ftp_paths:
             ftp_path = f"ftp://{ftp_path}"
-            f.write(f"wget {ftp_path}\n")
+            f.write(f"wget -P {output_dir} {ftp_path} \n")
 
+    # make bash file executable
     chmod(out_file, 0o777)
     return out_file
 

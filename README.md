@@ -14,6 +14,6 @@ optional arguments:
   -h, --help                show this help message and exit
   --id SRA_ID               id of a SRA (e.g. SRR1778454)
   --file-ids FILE_IDS       path to file containing one or more SRA's
-  --output-dir OUTPUT_DIR   path to output dir
+  --output-dir OUTPUT_DIR   path to output dir to save the fastQ files to
 ```
 
