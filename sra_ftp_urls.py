@@ -54,7 +54,7 @@ def write_commands_to_file(ftp_paths, output_dir):
         output_dir = f"'{output_dir}'"
 
     with open(out_file, "w") as f:
-        f.write("!/usr/bin/bash\n")
+        f.write("#!/usr/bin/bash\n")
         for ftp_path in ftp_paths:
             ftp_path = f"ftp://{ftp_path}"
             f.write(f"wget -P {output_dir} {ftp_path} \n")
